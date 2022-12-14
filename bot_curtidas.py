@@ -38,35 +38,54 @@ def pesquisa(pagina):
     pyautogui.hotkey('ctrl', 'v')
    
 
-
-
-
 webbrowser.open_new('https://www.instagram.com') # Open browser
-pyautogui.click(759,369, duration=5) # Move and click
+sleep(2)
+pyautogui.click(759,369, duration=1) # Move and click
+sleep(5)
 digitar_usuario('willsantos.edf@gmail.com',) # Type User
-pyautogui.click(759,411, duration=2) # Move and click
+sleep(1)
+pyautogui.click(759,411, duration=1) # Move and click
+sleep(1)
 digitar_senha('#Willi@m86')# Type password
+sleep(2)
 #pyautogui.click(877,506, duration=2)
-pyautogui.click(880,467, duration=2) # Push login button
-pyautogui.click(671,545, duration=5) # Save your login info?
-pyautogui.click(561,194, duration=5) # Move and click
+pyautogui.click(880,467, duration=1) # Push login button
+sleep(15)
+pyautogui.click(671,545, duration=1) # Save your login info?
+sleep(10)
+pyautogui.click(561,194, duration=1) # Move and click
+sleep(1)
 pesquisa('luciele_isis') # Type page
-pyautogui.click(584,268, duration=5) # Move and click
-sleep(5) # Time to load
+sleep(5)
+pyautogui.click(584,268, duration=1) # Move and click
+sleep(10) # Time to load
 
 # Scroll page
 for i in range(3): 
     pyautogui.scroll(-4)
     sleep(1)
 
-pyautogui.click(378,330, duration=5) # Move and click
-sleep(2) # Time to load
+pyautogui.click(378,330, duration=1) # Move and click
+sleep(5) # Time to load
+coracao = pyautogui.locateCenterOnScreen('coracao.png') #Find like icon
+sleep(1)
+#check if photo was liked: #Willi@m86
+if coracao is not None:
+    sleep(30)
+elif coracao == None:
+    pyautogui.click(703,600, duration=1)
+    sleep(5)
+    pyautogui.click(743,602, duration=1)
+    sleep(2)
+    pyautogui.moveTo(738,719, duration=1)
+    sleep(2)
+    pyautogui.typewrite('Gostei dessa foto!')
+    sleep(5)
+    pyautogui.click(1149,719, duration=1)
+    sleep(1)
 
-curtir = pyautogui.locateCenterOnScreen('Nao_curtir.png') #Find like icon
+pyautogui.click(1299,624, duration=1)
+sleep(3)
 
-#check if photo was liked: 
-if curtir:
-    pyautogui.click(curtir[0],curtir[1], duration=3)
-else:
-    print(f'Foto já foi curtida')
-
+pyautogui.click(1348,46, duration=1)
+sleep(3)
