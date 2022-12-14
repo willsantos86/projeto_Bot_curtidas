@@ -38,7 +38,7 @@ def pesquisa(pagina):
     pyautogui.hotkey('ctrl', 'v')
    
 
-webbrowser.open_new('https://www.instagram.com') # Open browser
+webbrowser.open_new_tab('https://www.instagram.com') # Open browser
 sleep(2)
 pyautogui.click(759,369, duration=1) # Move and click
 sleep(5)
@@ -71,7 +71,7 @@ coracao = pyautogui.locateCenterOnScreen('coracao.png') #Find like icon
 sleep(1)
 #check if photo was liked: #Willi@m86
 if coracao is not None:
-    sleep(30)
+    sleep(120)
 elif coracao == None:
     pyautogui.click(703,600, duration=1)
     sleep(5)
@@ -82,7 +82,7 @@ elif coracao == None:
     pyautogui.typewrite('Gostei dessa foto!')
     sleep(5)
     pyautogui.click(1149,719, duration=1)
-    sleep(1)
+    sleep(3)
 
 pyautogui.click(1299,624, duration=1)
 sleep(3)
