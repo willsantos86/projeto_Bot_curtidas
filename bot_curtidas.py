@@ -39,7 +39,7 @@ def pesquisa(pagina):
    
 
 webbrowser.open_new_tab('https://www.instagram.com') # Open browser
-sleep(2)
+sleep(3)
 pyautogui.click(759,369, duration=1) # Move and click
 sleep(5)
 digitar_usuario('willsantos.edf@gmail.com',) # Type User
@@ -52,13 +52,13 @@ sleep(2)
 pyautogui.click(880,467, duration=1) # Push login button
 sleep(15)
 pyautogui.click(671,545, duration=1) # Save your login info?
-sleep(10)
+sleep(5)
 pyautogui.click(561,194, duration=1) # Move and click
 sleep(1)
 pesquisa('luciele_isis') # Type page
 sleep(5)
 pyautogui.click(584,268, duration=1) # Move and click
-sleep(10) # Time to load
+sleep(5) # Time to load
 
 # Scroll page
 for i in range(3): 
@@ -67,22 +67,22 @@ for i in range(3):
 
 pyautogui.click(378,330, duration=1) # Move and click
 sleep(5) # Time to load
-coracao = pyautogui.locateCenterOnScreen('coracao.png') #Find like icon
+coracao = pyautogui.locateCenterOnScreen('coracao.jpg') #Find like icon
 sleep(1)
 #check if photo was liked: #Willi@m86
 if coracao is not None:
     sleep(120)
 elif coracao == None:
     pyautogui.click(703,600, duration=1)
-    sleep(5)
+    sleep(2)
     pyautogui.click(743,602, duration=1)
     sleep(2)
     pyautogui.moveTo(738,719, duration=1)
     sleep(2)
     pyautogui.typewrite('Gostei dessa foto!')
-    sleep(5)
+    sleep(2)
     pyautogui.click(1149,719, duration=1)
-    sleep(3)
+    sleep(2)
 
 pyautogui.click(1299,624, duration=1)
 sleep(3)
